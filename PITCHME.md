@@ -1,6 +1,5 @@
 @title[Code Presenting]
-## `GitPitch`
-# `Code`
+## `My Sample Presentation`
 # `Presenting`
 
 ---
@@ -16,19 +15,7 @@
 
 ```python
 from time import localtime
-
-activities = {8: 'Sleeping', 9: 'Commuting', 17: 'Working',
-              18: 'Commuting', 20: 'Eating', 22: 'Resting' }
-
-time_now = localtime()
-hour = time_now.tm_hour
-
-for activity_time in sorted(activities.keys()):
-    if hour < activity_time:
-        print activities[activity_time]
-        break
-else:
-    print 'Unknown, AFK or sleeping!'
+ { Code Snippet }
 ```
 
 @snap[south span-100 text-06]
@@ -46,29 +33,7 @@ Fenced code blocks let you present **code snippets** with auto-syntax highlighti
 @title[Sample Code Presenting]
 
 ```go
-package main
-
-import (
-	"fmt"
-	"golang.org/x/net/websocket"
-	"log"
-	"net/http"
-)
-
-func echoHandler(ws *websocket.Conn) {
-	msg := make([]byte, 512)
-	n, err := ws.Read(msg)
-	if err != nil {
-		log.Fatal(err)
-	}
-	fmt.Printf("Receive: %s\n", msg[:n])
-
-	m, err := ws.Write(msg[:n])
-	if err != nil {
-		log.Fatal(err)
-	}
-	fmt.Printf("Send: %s\n", msg[:m])
-}
+{Code Snippet}
 ```
 
 
